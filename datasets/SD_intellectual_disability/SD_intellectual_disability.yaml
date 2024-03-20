@@ -1,0 +1,20 @@
+id: SD_intellectual_disability
+name: SD intellectual disability
+study_type:
+- WE
+has_complex: true
+enabled: true
+studies:
+- SD_Lelieveld2016_liftover
+- SD_VissersWE2012_liftover
+- SD_Rauch2012_liftover
+genotype_browser:
+  has_study_filters: true
+denovo_gene_sets:
+  enabled: false
+enrichment:
+  enabled: true
+  selected_person_set_collections:
+  - phenotype
+  default_background_model: hg38/enrichment/ur_synonymous_iWES_v2
+description_file: README.md

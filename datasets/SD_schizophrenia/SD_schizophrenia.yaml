@@ -1,0 +1,21 @@
+id: SD_schizophrenia
+name: SD schizophrenia
+study_type:
+- WE
+has_complex: true
+enabled: true
+studies:
+- SD_GulsunerSchWE2013_liftover
+- SD_KarayiorgouWE2012_liftover
+- SD_ODonovanWE2014_liftover
+- SD_McCarthy2014_liftover
+genotype_browser:
+  has_study_filters: true
+denovo_gene_sets:
+  enabled: false
+enrichment:
+  enabled: true
+  selected_person_set_collections:
+  - phenotype
+  default_background_model: hg38/enrichment/ur_synonymous_iWES_v2
+description_file: README.md

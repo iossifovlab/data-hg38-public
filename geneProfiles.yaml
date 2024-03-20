@@ -1,0 +1,251 @@
+default_dataset: ALL_genotypes
+
+order:
+- autism_gene_sets_rank
+- autism_scores
+- sequencing_de_novo
+- relevant_gene_sets_rank
+- protection_scores
+
+gene_sets:
+- category: autism_gene_sets
+  display_name: Autism Gene Sets
+  sets:
+  - set_id: SFARI ALL
+    collection_id: sfari
+  - set_id: autism candidates from Iossifov PNAS 2015
+    collection_id: autism
+  - set_id: autism candidates from Sanders Neuron 2015
+    collection_id: autism
+  - set_id: Yuen Scherer Nature 2017
+    collection_id: autism
+  - set_id: Turner Eichler ajhg 2019
+    collection_id: autism
+  - set_id: Satterstrom Buxbaum Cell 2020 top
+    collection_id: autism
+- category: relevant_gene_sets
+  display_name: Relevant Gene Sets
+  sets: 
+    - set_id: SFARI Syndromic
+      collection_id: sfari
+    - set_id: CHD8 target genes
+      collection_id: relevant
+    - set_id: chromatin modifiers
+      collection_id: relevant
+    - set_id: essential genes
+      collection_id: relevant
+    - set_id: FMRP Darnell
+      collection_id: relevant
+
+genomic_scores:
+- category: autism_scores
+  display_name: Autism Gene Scores
+  scores:
+  - score_name: SFARI gene score
+    format: "%%s"
+  - score_name: Satterstrom Buxbaum Cell 2020 qval
+    format: "%%.2f"
+  - score_name: Iossifov Wigler PNAS 2015 post noaut
+    format: "%%.2f"
+- category: protection_scores
+  display_name: Protection Gene Scores
+  scores:
+    - score_name: RVIS_rank
+      format: "%%s"
+    - score_name: LGD_rank
+      format: "%%s"
+    - score_name: pLI_rank
+      format: "%%s"
+    - score_name: pRec_rank
+      format: "%%s"
+
+datasets:
+  sequencing_de_novo:
+    statistics:
+    - id: denovo_lgds
+      description: de Novo LGDs
+      display_name: dn LGDs
+      effects:
+      - LGDs
+      category: denovo
+    - id: denovo_missense
+      description: de Novo missense
+      display_name: dn mis
+      effects:
+      - missense
+      category: denovo
+      default_visible: false
+    - id: denovo_missense_mpc_2
+      description: "de Novo missense with MPC >=  2"
+      display_name: dn mis 2
+      effects:
+      - missense
+      category: denovo
+      scores:
+      - name: mpc
+        min: 2.0
+    - id: denovo_missense_mpc_3
+      description: "de Novo missense with MPC >=  3"
+      display_name: dn mis 3
+      effects:
+      - missense
+      category: denovo
+      scores:
+      - name: mpc
+        min: 3.0
+      default_visible: false
+    - id: denovo_synonymous
+      description: de Novo synonymous
+      display_name: dn syn
+      effects:
+      - synonymous
+      category: denovo
+      default_visible: false
+    - id: denovo_intronic_indels
+      description: number of de Novo intronic indels
+      display_name: dn IIND
+      effects:
+      - intron
+      category: denovo
+      variant_types:
+      - ins
+      - del
+      default_visible: false
+    person_sets:
+    - set_name: autism
+      collection_name: phenotype
+      default_visible: true
+    - set_name: congenital_heart_disease
+      collection_name: phenotype
+      default_visible: true
+    - set_name: developmental_disorder
+      collection_name: phenotype
+      default_visible: true
+    - set_name: epilepsy
+      collection_name: phenotype
+      default_visible: true
+    - set_name: intellectual_disability
+      collection_name: phenotype
+      default_visible: true
+    - set_name: schizophrenia
+      collection_name: phenotype
+      default_visible: true
+    - set_name: unaffected
+      collection_name: phenotype
+      default_visible: true
+#   denovo_db_liftover:
+#     statistics:
+#     - id: denovo_lgds
+#       description: de Novo LGDs
+#       display_name: dn LGDs
+#       effects: 
+#       - LGDs
+#       category: denovo
+#     - id: denovo_missense
+#       description: de Novo missense
+#       display_name: dn mis
+#       effects: 
+#       - missense
+#       category: denovo
+#       default_visible: false
+#     - id: denovo_missense_mpc_2
+#       description: "de Novo missense with MPC >=  2"
+#       display_name: dn mis 2
+#       effects: 
+#       - missense
+#       category: denovo
+#       scores: 
+#       - name: mpc
+#         min: 2.0
+#     - id: denovo_missense_mpc_3
+#       description: "de Novo missense with MPC >=  3"
+#       display_name: dn mis 3
+#       effects: 
+#       - missense
+#       category: denovo
+#       scores: 
+#       - name: mpc
+#         min: 3.0
+#       default_visible: false
+#     - id: denovo_synonymous
+#       description: de Novo synonymous
+#       display_name: dn syn
+#       effects: 
+#       - synonymous
+#       category: denovo
+#       default_visible: false
+#     - id: denovo_intronic_indels
+#       description: number of de Novo intronic indels
+#       display_name: dn IIND
+#       effects: 
+#       - intron
+#       category: denovo
+#       variant_types: 
+#       - ins
+#       - del
+#       default_visible: false
+#     person_sets:  
+#     - set_name: autism
+#       collection_name: phenotype
+#       default_visible: true
+#     - set_name: intellectualDisability
+#       collection_name: phenotype
+#       default_visible: true
+#     - set_name: epilepsy
+#       collection_name: phenotype
+#       default_visible: true
+#     - set_name: schizophrenia
+#       collection_name: phenotype
+#       default_visible: true
+#     - set_name: developmentalDisorder
+#       collection_name: phenotype
+#       default_visible: true
+#     - set_name: congenital_heart_disease
+#       collection_name: phenotype
+#       default_visible: true
+#     - set_name: unaffected
+#       collection_name: phenotype
+#       default_visible: true
+#     - set_name: acromelic_frontonasal_dysostosis
+#       collection_name: phenotype
+#       default_visible: false
+#     - set_name: amyotrophic_lateral_sclerosis
+#       collection_name: phenotype
+#       default_visible: false
+#     - set_name: anophthalmia_microphthalmia
+#       collection_name: phenotype
+#       default_visible: false
+#     - set_name: bipolar_type1
+#       collection_name: phenotype
+#       default_visible: false
+#     - set_name: bipolar_type2
+#       collection_name: phenotype
+#       default_visible: false
+#     - set_name: cantu_syndrome
+#       collection_name: phenotype
+#       default_visible: false
+#     - set_name: cerebral_palsy
+#       collection_name: phenotype
+#       default_visible: false
+#     - set_name: congenital_diaphragmatic_hernia
+#       collection_name: phenotype
+#       default_visible: false
+#     - set_name: early_onset_alzheimer
+#       collection_name: phenotype
+#       default_visible: false
+#     - set_name: early_onset_parkinson
+#       collection_name: phenotype
+#       default_visible: false
+#     - set_name: neural_tube_defects
+#       collection_name: phenotype
+#       default_visible: false
+#     - set_name: sporadic_infantile_spasm_syndrome
+#       collection_name: phenotype
+#       default_visible: false
+#     - set_name: tourette_syndrome
+#       collection_name: phenotype
+#       default_visible: false
+#     - set_name: mixed
+#       collection_name: phenotype
+#       default_visible: false
+      

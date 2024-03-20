@@ -1,0 +1,24 @@
+id: SD_iWES_v1_1_genotypes_DENOVO
+conf_dir: .
+has_denovo: true
+has_cnv: false
+has_transmitted: false
+enabled: true
+genotype_storage:
+  id: duckdb_sd
+  tables:
+    pedigree: SD_iWES_v1_1_genotypes_DENOVO_pedigree
+    summary: SD_iWES_v1_1_genotypes_DENOVO_summary
+    family: SD_iWES_v1_1_genotypes_DENOVO_family
+    meta: SD_iWES_v1_1_genotypes_DENOVO_meta
+enrichment:
+  enabled: true
+  selected_person_set_collections:
+  - phenotype
+  default_background_model: hg38/enrichment/ur_synonymous_iWES_v2
+genotype_browser:
+  enabled: true
+common_report:
+  enabled: true
+denovo_gene_sets:
+  enabled: false

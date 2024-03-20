@@ -1,0 +1,50 @@
+id: SD_Helbig2016_liftover
+conf_dir: .
+has_denovo: true
+has_cnv: false
+has_transmitted: false
+study_phenotype: epilepsy
+enabled: true
+genotype_storage:
+  id: duckdb_sd
+  tables:
+    pedigree: SD_Helbig2016_liftover_pedigree
+    summary: SD_Helbig2016_liftover_summary
+    family: SD_Helbig2016_liftover_family
+    meta: SD_Helbig2016_liftover_meta
+genotype_browser:
+  enabled: true
+common_report:
+  enabled: true
+denovo_gene_sets:
+  enabled: false
+enrichment:
+  enabled: true
+  selected_person_set_collections:
+  - phenotype
+  default_background_model: hg38/enrichment/ur_synonymous_iWES_v2
+person_set_collections:
+  selected_person_set_collections:
+  - phenotype
+  phenotype:
+    id: phenotype
+    name: Phenotype
+    sources:
+    - from: pedigree
+      source: status
+    domain:
+    - id: epilepsy
+      name: epilepsy
+      values:
+      - affected
+      color: '#ffe502'
+    - id: unaffected
+      name: unaffected
+      values:
+      - unaffected
+      color: '#ffffff'
+    default:
+      id: unspecified
+      name: unspecified
+      color: '#aaaaaa'
+description_file: README.md

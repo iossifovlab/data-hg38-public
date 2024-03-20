@@ -1,0 +1,110 @@
+{
+    "enrichment_events_counting": {
+        "developmental_disorder": {
+            "LGDs": {
+                "all": 1184,
+                "rec": 138,
+                "male": 599,
+                "female": 585,
+                "unspecified": 0,
+                "rec_genes": null
+            },
+            "missense": {
+                "all": 4668,
+                "rec": 731,
+                "male": 2605,
+                "female": 2063,
+                "unspecified": 0,
+                "rec_genes": null
+            },
+            "synonymous": {
+                "all": 1656,
+                "rec": 128,
+                "male": 938,
+                "female": 718,
+                "unspecified": 0,
+                "rec_genes": null
+            }
+        },
+        "unaffected": {
+            "LGDs": {
+                "all": 0,
+                "rec": 0,
+                "male": 0,
+                "female": 0,
+                "unspecified": 0,
+                "rec_genes": null
+            },
+            "missense": {
+                "all": 0,
+                "rec": 0,
+                "male": 0,
+                "female": 0,
+                "unspecified": 0,
+                "rec_genes": null
+            },
+            "synonymous": {
+                "all": 0,
+                "rec": 0,
+                "male": 0,
+                "female": 0,
+                "unspecified": 0,
+                "rec_genes": null
+            }
+        }
+    },
+    "enrichment_gene_counting": {
+        "developmental_disorder": {
+            "LGDs": {
+                "all": 705,
+                "rec": 138,
+                "male": 422,
+                "female": 373,
+                "unspecified": 0,
+                "rec_genes": null
+            },
+            "missense": {
+                "all": 3505,
+                "rec": 731,
+                "male": 2199,
+                "female": 1741,
+                "unspecified": 0,
+                "rec_genes": null
+            },
+            "synonymous": {
+                "all": 1516,
+                "rec": 128,
+                "male": 891,
+                "female": 696,
+                "unspecified": 0,
+                "rec_genes": null
+            }
+        },
+        "unaffected": {
+            "LGDs": {
+                "all": 0,
+                "rec": 0,
+                "male": 0,
+                "female": 0,
+                "unspecified": 0,
+                "rec_genes": null
+            },
+            "missense": {
+                "all": 0,
+                "rec": 0,
+                "male": 0,
+                "female": 0,
+                "unspecified": 0,
+                "rec_genes": null
+            },
+            "synonymous": {
+                "all": 0,
+                "rec": 0,
+                "male": 0,
+                "female": 0,
+                "unspecified": 0,
+                "rec_genes": null
+            }
+        }
+    }
+}

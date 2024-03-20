@@ -1,0 +1,25 @@
+id: SD_Yuen2017_liftover
+conf_dir: .
+has_denovo: true
+has_cnv: false
+has_transmitted: false
+enabled: true
+genotype_storage:
+  id: duckdb_sd
+  tables:
+    pedigree: SD_Yuen2017_liftover_pedigree
+    summary: SD_Yuen2017_liftover_summary
+    family: SD_Yuen2017_liftover_family
+    meta: SD_Yuen2017_liftover_meta
+genotype_browser:
+  enabled: true
+common_report:
+  enabled: true
+denovo_gene_sets:
+  enabled: false
+enrichment:
+  enabled: true
+  selected_person_set_collections:
+  - phenotype
+  default_background_model: hg38/enrichment/ur_synonymous_iWES_v2
+description_file: README.md

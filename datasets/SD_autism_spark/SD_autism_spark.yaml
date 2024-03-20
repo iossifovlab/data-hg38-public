@@ -1,0 +1,18 @@
+id: SD_autism_spark
+name: SD SPARK autism
+study_type:
+- WE
+has_complex: true
+enabled: true
+studies:
+- SD_iWES_v1_1_genotypes_DENOVO
+genotype_browser:
+  has_study_filters: true
+denovo_gene_sets:
+  enabled: false
+enrichment:
+  enabled: true
+  selected_person_set_collections:
+  - phenotype
+  default_background_model: hg38/enrichment/ur_synonymous_iWES_v2
+description_file: README.md

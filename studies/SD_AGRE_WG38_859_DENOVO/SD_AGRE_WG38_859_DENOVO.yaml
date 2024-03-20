@@ -1,0 +1,24 @@
+id: SD_AGRE_WG38_859_DENOVO
+conf_dir: .
+has_denovo: true
+has_cnv: false
+has_transmitted: false
+enabled: true
+genotype_storage:
+  id: duckdb_sd
+  tables:
+    pedigree: SD_AGRE_WG38_859_DENOVO_pedigree
+    summary: SD_AGRE_WG38_859_DENOVO_summary
+    family: SD_AGRE_WG38_859_DENOVO_family
+    meta: SD_AGRE_WG38_859_DENOVO_meta
+genotype_browser:
+  enabled: true
+common_report:
+  enabled: true
+denovo_gene_sets:
+  enabled: false
+enrichment:
+  enabled: true
+  selected_person_set_collections:
+  - phenotype
+  default_background_model: hg38/enrichment/ur_synonymous_iWES_v2

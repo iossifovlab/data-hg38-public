@@ -1,0 +1,23 @@
+id: sequencing_de_novo
+name: Sequencing de Novo
+study_type:
+- WG
+- WE
+- TG
+has_complex: true
+enabled: true
+studies:
+- SD_autism
+- SD_congenital_heart_disease
+- SD_developmental_disorder
+- SD_epilepsy
+- SD_intellectual_disability
+- SD_schizophrenia
+genotype_browser:
+  has_study_filters: true
+enrichment:
+  enabled: true
+  selected_person_set_collections:
+  - phenotype
+  default_background_model: hg38/enrichment/ur_synonymous_iWES_v2
+description_file: README.md

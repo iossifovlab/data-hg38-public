@@ -1,0 +1,27 @@
+id: SD_autism_ssc
+name: SD SSC autism
+study_type:
+- WG
+- WE
+- TG
+has_complex: true
+enabled: true
+studies:
+- SD_EichlerTG2012_liftover
+- SD_EichlerWE2012_liftover
+- SD_IossifovWE2014_liftover
+- SD_Krumm2015_SNVindel_liftover
+- SD_ORoakTG2014_SSC_liftover
+- SD_SFARI_SSC_WGS_CSHL_DENOVO
+- SD_Turner2017_liftover
+- SD_Werling2018_liftover
+genotype_browser:
+  has_study_filters: true
+denovo_gene_sets:
+  enabled: false
+enrichment:
+  enabled: true
+  selected_person_set_collections:
+  - phenotype
+  default_background_model: hg38/enrichment/ur_synonymous_iWES_v2
+description_file: README.md

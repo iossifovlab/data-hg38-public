@@ -1,0 +1,24 @@
+id: SD_autism_other
+name: SD Autism Other
+study_type:
+- WG
+- WE
+- TG
+has_complex: true
+enabled: true
+studies:
+- SD_ACS2014_liftover
+- SD_AGRE_WG38_859_DENOVO
+- SD_ORoakTG2014_TASC_liftover
+- SD_Yuen2017_liftover
+- SD_Takata2018_liftover
+genotype_browser:
+  has_study_filters: true
+denovo_gene_sets:
+  enabled: false
+enrichment:
+  enabled: true
+  selected_person_set_collections:
+  - phenotype
+  default_background_model: hg38/enrichment/ur_synonymous_iWES_v2
+description_file: README.md

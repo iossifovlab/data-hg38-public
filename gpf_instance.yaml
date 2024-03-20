@@ -1,0 +1,90 @@
+vars:
+  instance_id: data_hg38_public
+instance_id: '%(instance_id)s'
+genotype_storage:
+  default: duckdb_sd
+  storages:
+  - id: duckdb_sd
+    storage_type: duckdb2
+    db: sequencing_de_novo.duckdb
+    read_only: true
+    base_dir: '%(wd)s/duckdb_storage'
+  - id: duckdb_parquet
+    storage_type: duckdb2
+annotation:
+  conf_file: '%($DAE_DB_DIR)s/annotation.yaml'
+studies:
+  dir: '%($DAE_DB_DIR)s/studies'
+datasets:
+  dir: '%($DAE_DB_DIR)s/datasets'
+default_study_config:
+  conf_file: '%($DAE_DB_DIR)s/defaultConfiguration.yaml'
+gene_profiles_config:
+  conf_file: '%($DAE_DB_DIR)s/geneProfiles.yaml'
+reference_genome:
+  resource_id: hg38/genomes/GRCh38-hg38
+gene_models:
+  resource_id: hg38/gene_models/refGene_v20170601
+gene_sets_db:
+  gene_set_collections:
+  - gene_properties/gene_sets/autism
+  - gene_properties/gene_sets/relevant
+  - gene_properties/gene_sets/sfari
+  - gene_properties/gene_sets/spark
+  - gene_properties/gene_sets/MSigDB_curated
+  - gene_properties/gene_sets/miRNA
+  - gene_properties/gene_sets/GO
+  - gene_properties/gene_sets/domain
+  - gene_properties/gene_sets/disease
+  - gene_properties/gene_sets/miRNA_Darnell
+gene_scores_db:
+  gene_scores:
+  - gene_properties/gene_scores/LGD
+  - gene_properties/gene_scores/RVIS
+  - gene_properties/gene_scores/pLI
+  - gene_properties/gene_scores/pRec
+  - gene_properties/gene_scores/SFARI_gene_score
+  - gene_properties/gene_scores/Satterstrom_Buxbaum_Cell_2020
+  - gene_properties/gene_scores/Iossifov_Wigler_PNAS_2015
+
+gene_profiles_config:
+  conf_file: '%($DAE_DB_DIR)s/geneProfiles.yaml'
+
+gpfjs:
+  visible_datasets:
+  - ALL_genotypes
+  - sequencing_de_novo
+  - SD_autism
+  - SD_autism_ssc
+  - SD_autism_spark
+  - SD_autism_other
+  - SD_congenital_heart_disease
+  - SD_developmental_disorder
+  - SD_epilepsy
+  - SD_intellectual_disability
+  - SD_schizophrenia
+  - SD_ACS2014_liftover
+  - SD_AGRE_WG38_859_DENOVO
+  - SD_Chung2015CHD_liftover
+  - SD_DDD2017_liftover
+  - SD_EichlerTG2012_liftover
+  - SD_EichlerWE2012_liftover
+  - SD_Epi4KWE2013_liftover
+  - SD_GulsunerSchWE2013_liftover
+  - SD_IossifovWE2014_liftover
+  - SD_KarayiorgouWE2012_liftover
+  - SD_Krumm2015_SNVindel_liftover
+  - SD_Lelieveld2016_liftover
+  - SD_ODonovanWE2014_liftover
+  - SD_ORoakTG2014_SSC_liftover
+  - SD_ORoakTG2014_TASC_liftover
+  - SD_SFARI_SSC_WGS_CSHL_DENOVO
+  - SD_VissersWE2012_liftover
+  - SD_Yuen2017_liftover
+  - SD_iWES_v1_1_genotypes_DENOVO
+  - SD_Helbig2016_liftover
+  - SD_McCarthy2014_liftover
+  - SD_Rauch2012_liftover
+  - SD_Takata2018_liftover
+  - SD_Turner2017_liftover
+  - SD_Werling2018_liftover
