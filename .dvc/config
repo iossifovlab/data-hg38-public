@@ -1,0 +1,13 @@
+[core]
+    analytics = false
+    remote = nemo
+[cache]
+    type = "hardlink,symlink"
+['remote "nemo"']
+    url = ssh://nemo.seqpipe.org:/data/seqpipe/data-hg38-public.dvc
+    user = seqpipe
+    port = 2020
+
+['remote "nemo.local"']
+    url = ssh://nemo:/data/seqpipe/data-hg38-public.dvc
+    user = seqpipe

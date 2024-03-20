@@ -1,0 +1,5 @@
+outs:
+- md5: da1e4a72742bba1cdec2d55fc730a466
+  size: 4571017216
+  hash: md5
+  path: sequencing_de_novo.duckdb
